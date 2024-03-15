@@ -14,18 +14,29 @@ export const Slide = () => {
         arrows: false
       };
   return (
-  <div className="carousel">
-    <Slider {...settings}>
-      {carouselImages.map((image, index) => (
-        <div key={index} className="carousel-slide">
-          <img src={image} alt="Carousel" className="carousel-image" />
-          <div className="carousel-text">
-            <span>WELCOME</span>
-            <span>TO OUR HOTEL</span>
-          </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 ">
+        {/* Image */}
+        <img src="img/2.jpg" alt="Image d'accueil" className="w-full h-auto object-cover rounded-lg shadow-lg z-8" />
+
+        {/* Texte d'accueil */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+          <h1 className="text-3xl font-semibold">Bienvenue à notre hôtel</h1>
+          <p className="text-3xl font-lg">Profitez d'un séjour luxueux et confortable dans notre établissement.</p>
         </div>
-      ))}
-    </Slider>
-  </div>
+      </div>
+
+  //   <div className="max-w-3xl mx-auto">
+  //   <Slider {...settings}>
+  //     {carouselImages.map((image, index) => (
+  //       <div key={index} className="h-96 relative">
+  //         <img src={image} alt="Carousel" className="h-full w-full object-cover" />
+  //         <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+  //           <span className="text-3xl font-bold mb-2">WELCOME</span>
+  //           <span className="text-3xl font-bold">TO OUR HOTEL</span>
+  //         </div>
+  //       </div>
+  //     ))}
+  //   </Slider>
+  // </div>
   )
 }

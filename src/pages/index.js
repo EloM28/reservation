@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Inter } from "next/font/google";
 import { RoomClient } from "@/components/rooms/RoomClient";
 import { Slide } from "./carousel/Slide";
+import { Footer } from "./footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Slide/>
       <RoomClient/>
+      <Footer/>
     </>
   );
 }
