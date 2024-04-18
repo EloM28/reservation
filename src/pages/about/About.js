@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const About = () => {
+const About = () => {
   return (
     <div>
         <div className="container mx-auto py-8">
@@ -22,3 +22,4 @@ export const About = () => {
     </div>
   )
 }
+export default About;

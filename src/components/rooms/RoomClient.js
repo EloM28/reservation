@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import ReactPaginate from 'react-paginate';
 
-export const RoomClient = ({id}) => {
+const RoomClient = ({id}) => {
  const [roomList,setRoomList]=useState([])
  const [currentPage, setCurrentPage] = React.useState(0);
  const handlePageChange = (selectedPage) => {
@@ -77,3 +77,4 @@ export const RoomClient = ({id}) => {
         </div>
   )
 }
+export default RoomClient;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick';
 
-export const Slide = () => {
+const Slide = () => {
     const carouselImages = ['/img/4.jpg','/img/5.jpg','/img/6.jpg']; 
     const settings = {
         dots: true,
@@ -40,3 +40,4 @@ export const Slide = () => {
   // </div>
   )
 }
+export default Slide;

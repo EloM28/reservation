@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <div>
         <header className="fixed top-0 left-0 w-full bg-white shadow z-20">
@@ -66,3 +66,5 @@ export const Navbar = () => {
   </div>
   )
 }
+
+export default Navbar;

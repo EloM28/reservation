@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className='mb-auto'>
         <footer className="bg-gray-800 py-4">
@@ -11,3 +11,4 @@ export const Footer = () => {
   </div>
   )
 }
+export default Footer;

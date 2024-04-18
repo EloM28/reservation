@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Contact = () => {
+const Contact = () => {
     const customStyle = {
         border:'dashed rgb(0,0,0)',
         // Ajoutez d'autres propriétés de style si nécessaire
@@ -49,3 +49,5 @@ export const Contact = () => {
       </div>
   )
 }
+
+export default Contact;

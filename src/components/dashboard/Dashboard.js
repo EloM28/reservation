@@ -3,7 +3,7 @@ import { Router, useRouter } from 'next/router';
 import { useState } from 'react';
     
 
-export const Dashboard = () => {
+const Dashboard = () => {
   const [error,setError]=useState('')
     const router=useRouter()
 
@@ -124,3 +124,4 @@ export const Dashboard = () => {
     </div>
   );
       }
+      export default Dashboard;
