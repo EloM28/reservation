@@ -20,10 +20,21 @@ const RoomClient = ({id}) => {
       console.error('Error fetching data:', error);
     }
   };
+  const pageCount =0;
+  const offset=0;
+  const currentRooms=0;
   const itemsPerPage = 6; // Nombre de chambres à afficher par page
-  const pageCount = Math.ceil(allRooms.length / itemsPerPage);
-  const offset = currentPage * itemsPerPage;
-  const currentRooms = allRooms.slice(offset, offset + itemsPerPage);
+  if(allRooms.length!=0){
+    pageCount = Math.ceil(allRooms.length / itemsPerPage);
+    offset = currentPage * itemsPerPage;
+    currentRooms = allRooms.slice(offset, offset + itemsPerPage);
+  }else{
+    pageCount = 0
+    offset = 0
+    currentRooms=0
+  }
+  
+  
   return (
     <div id={id}>
         <div className="container mx-auto pt-16">
