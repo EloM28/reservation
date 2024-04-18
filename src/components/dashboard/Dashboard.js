@@ -6,10 +6,17 @@ import { useState } from 'react';
 export const Dashboard = () => {
   const [error,setError]=useState('')
     const router=useRouter()
+
+    const handleGetpic=(datas)=>{
+      console.log(datas)
+       setSelectedImage(URL.createObjectURL(datas[0]))
+      setPhoto(datas[0])
+  }
   const addRoom = async (values) => {
     
     try {
       // Faites une requête POST à votre API pour ajouter la chambre à la base de données
+      
       const addRoom={
         method:"POST",
         headers:{
@@ -56,6 +63,9 @@ export const Dashboard = () => {
           if (!values.description) {
             errors.price = 'Veuillez entrer une description de chambre.';
           }
+          if (!values.photo) {
+            errors.photo = 'photo field is obligatory.';
+          }
 
           return errors;
         }}
@@ -100,7 +110,12 @@ export const Dashboard = () => {
             <Field type="textarea" id="description" name="description" className="w-full px-3 py-7 border rounded " />
             <ErrorMessage name="description" component="div" className="text-red-500" />
           </div>
-
+          <div className="mb-4">
+            <label htmlFor="status"  className="block font-medium mb-1">Status :</label>
+            <Field as="file" id="changePic" onChange={(e)=>handleGetpic(e.target.files)} name="photo" className="w-full px-3 py-2 border rounded">
+            </Field>
+            <ErrorMessage name="category" component="div" className="text-red-500" />
+          </div>
           <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
             Add Room
           </button>

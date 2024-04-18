@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import ReactPaginate from 'react-paginate';
 
-export const RoomClient = () => {
+export const RoomClient = ({id}) => {
  const [roomList,setRoomList]=useState([])
  const [currentPage, setCurrentPage] = React.useState(0);
  const handlePageChange = (selectedPage) => {
@@ -25,7 +25,7 @@ export const RoomClient = () => {
   const offset = currentPage * itemsPerPage;
   const currentRooms = allRooms.slice(offset, offset + itemsPerPage);
   return (
-    <div>
+    <div id={id}>
         <div className="container mx-auto pt-16">
         <h1 className="text-4xl font-bold text-center text-gray-800">Available Rooms</h1>
         <div  className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3">
@@ -34,7 +34,7 @@ export const RoomClient = () => {
                  
                    <div key={index} className="max-w-sm mx-auto overflow-hidden bg-white rounded shadow">
                     <img
-                        src={`/img/1.jpg`}
+                        src={`/img/${index}.jpg`}
                         alt="Room 1"
                         className="object-cover w-full h-48"
                     />

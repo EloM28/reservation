@@ -133,7 +133,7 @@ const Rooms = () => {
 
   const modificate=async (e) => {
     e.preventDefault();
-    try {
+    try {      
       const addData={
         method:"PUT",
         headers:{
@@ -186,7 +186,7 @@ const Rooms = () => {
     }
   };
   return (
-      <div className="flex">
+      <div className="flex mt">
       <div className="w-1/3 p-4">
         <h2 className="text-2xl text-center mb-4">Hotel Rooms</h2>
         <form onSubmit={addRoom} className="space-y-4">

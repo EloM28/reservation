@@ -24,7 +24,7 @@ const LoginPage = () => {
       const data=await response.json()
       console.log(data);
       if(data.response.message=='success'){
-        router.push('/dashboard'); // Redirige vers la page du tableau de bord après la connexion réussie
+        router.push('/rooms'); // Redirige vers la page du tableau de bord après la connexion réussie
       }
       else{
         setError("User not Exists")
