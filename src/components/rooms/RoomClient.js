@@ -20,9 +20,9 @@ const RoomClient = ({id}) => {
       console.error('Error fetching data:', error);
     }
   };
-  const pageCount =0;
-  const offset=0;
-  const currentRooms=0;
+  let pageCount =0;
+  let offset=0;
+  let currentRooms=0;
   const itemsPerPage = 6; // Nombre de chambres à afficher par page
   if(allRooms.length!=0){
     pageCount = Math.ceil(allRooms.length / itemsPerPage);
