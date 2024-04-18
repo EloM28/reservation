@@ -1,10 +1,9 @@
 import React from 'react'
-import { Dashboard } from '@/components/dashboard/Dashboard'
 import Dash from '@/components/dashboard/Dash'
-import { Footer } from '@/pages/footer/Footer'
+import  Footer  from '@/pages/footer/Footer'
 
 
-const index = () => {
+export default function index ()  {
   return (
     <div>
       <Dash/>
@@ -12,7 +11,6 @@ const index = () => {
   )
 }
 
-export default index
 
 index.getLayout=function pageLayout(page){
   return(

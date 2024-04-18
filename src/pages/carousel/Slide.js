@@ -1,5 +1,4 @@
 import React from 'react'
-import Slider from 'react-slick';
 
 const Slide = () => {
     const carouselImages = ['/img/4.jpg','/img/5.jpg','/img/6.jpg']; 
