@@ -32,6 +32,33 @@ export const Navbar = () => {
               Contact
             </a>
           </li>
+          {/* {status!='authenticated' && !session && (
+          <li>
+            <Link href='/api/auth/signin'>
+              <span
+                onClick={e => {
+                  e.preventDefault()
+                  signIn('google')
+                }}>
+                Sign In
+              </span>
+            </Link>
+          </li>
+        )}
+        {session && (
+          <li>
+            <Link href='/api/auth/signout'>
+              <span
+                onClick={e => {
+                  e.preventDefault()
+                  signOut('google')
+                }}>
+                  <img src={session.user.image} className='rounded-full' width='30' height='30' />
+                Sign Out
+              </span>
+            </Link>
+          </li>
+        )} */}
         </ul>
       </nav>
     </header>

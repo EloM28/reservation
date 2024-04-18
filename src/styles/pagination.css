@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pagination-previous,
+  .pagination-next {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .pagination-break,
+  .pagination-page {
+    margin: 0 5px;
+  }
+  
+  .pagination-link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .pagination-link:hover {
+    text-decoration: underline;
+  }
+  
+  .pagination-disabled {
+    display: none;
+  }
